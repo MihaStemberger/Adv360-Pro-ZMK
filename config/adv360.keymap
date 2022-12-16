@@ -5,29 +5,9 @@
 #include <dt-bindings/zmk/backlight.h>
 
 #define AS(keycode) &as LS(keycode) keycode     								// Autoshift Macro
-#define MP(macro_primary,macro_secondary) &mp &macro_secondary &macro_primary	// Macro proxy
+#define MP(macro_primary,macro_secondary) &mp macro_secondary macro_primary		// Macro proxy
 
 / {
-
-	macros {
-		term_new: term_new {
-			label = "ZM_term_new";
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings
-				= <&macro_tap &kp LCTRL &kp LALT &kp T>
-				;
-		}; 
-		term_new_tab: term_new_tab {
-			label = "ZM_term_new_tab";
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings
-				= <&macro_tap &kp LCTRL &kp LSHFT &kp T>
-				;
-		};
-	};
-
 
     behaviors {
       #include "macros.dtsi"
@@ -69,7 +49,7 @@
       bindings = <
         AS(EQUAL) &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 &tog 1                                                                       &mo 3 	&kp N6 	&kp N7	&kp N8   	&kp N9		&kp N0   	AS(MINUS)
         &kp TAB   AS(Q) 	AS(W) 	 AS(E)    AS(R)      AS(T)  &none                                                                        &none 	AS(Y)  	AS(U)  	AS(I)     	AS(O)    	AS(P)    	AS(BSLH)
-        &kp ESC   AS(A)     AS(S)    AS(D)    AS(F)      AS(G)  &none           &kp LCTRL &kp LALT             &kp LGUI  &kp RCTRL           MP(term_new,term_new_tab)	AS(H)  	AS(J)  	AS(K)     	AS(L)    	AS(SEMI) 	AS(SQT)
+        &kp ESC   AS(A)     AS(S)    AS(D)    AS(F)      AS(G)  &none           &kp LCTRL &kp LALT             &kp LGUI  &kp RCTRL           MP(&term_new,&term_new_tab)	AS(H)  	AS(J)  	AS(K)     	AS(L)    	AS(SEMI) 	AS(SQT)
         &kp LSHFT AS(Z)    	AS(X)    AS(C)    AS(V)      AS(B)         &none    &none     &kp HOME &none &none &kp PG_UP &none     &none           	AS(N)  	AS(M) 	AS(COMMA) 	AS(DOT)  	AS(FSLH) 	&kp LALT
         &mo 2     AS(GRAVE) &kp CAPS &kp LEFT &kp RIGHT                &kp BSPC &kp DEL   &kp END              &kp PG_DN &kp ENTER &kp SPACE              	&kp UP 	&kp DOWN  	AS(LBKT) 	AS(RBKT) 	&mo 2
       >;
