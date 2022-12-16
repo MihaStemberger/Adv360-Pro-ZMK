@@ -56,7 +56,7 @@
       bindings = <
         AS(EQUAL) &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 &tog 1                                                                       &mo 3 	&kp N6 	&kp N7	&kp N8   	&kp N9		&kp N0   	AS(MINUS)
         &kp TAB   AS(Q) 	AS(W) 	 AS(E)    AS(R)      AS(T)  &none                                                                        &none 	AS(Y)  	AS(U)  	AS(I)     	AS(O)    	AS(P)    	AS(BSLH)
-        &kp ESC   AS(A)     AS(S)    AS(D)    AS(F)      AS(G)  &none           &kp LCTRL &kp LALT             &kp LGUI  &kp RCTRL           &as LS(&term_new) &term_new_tab	AS(H)  	AS(J)  	AS(K)     	AS(L)    	AS(SEMI) 	AS(SQT)
+        &kp ESC   AS(A)     AS(S)    AS(D)    AS(F)      AS(G)  &none           &kp LCTRL &kp LALT             &kp LGUI  &kp RCTRL           &as LS(<&term_new>) <&term_new_tab>	AS(H)  	AS(J)  	AS(K)     	AS(L)    	AS(SEMI) 	AS(SQT)
         &kp LSHFT AS(Z)    	AS(X)    AS(C)    AS(V)      AS(B)         &none    &none     &kp HOME &none &none &kp PG_UP &none     &none           	AS(N)  	AS(M) 	AS(COMMA) 	AS(DOT)  	AS(FSLH) 	&kp LALT
         &mo 2     AS(GRAVE) &kp CAPS &kp LEFT &kp RIGHT                &kp BSPC &kp DEL   &kp END              &kp PG_DN &kp ENTER &kp SPACE              	&kp UP 	&kp DOWN  	AS(LBKT) 	AS(RBKT) 	&mo 2
       >;
