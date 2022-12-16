@@ -27,25 +27,26 @@
 		  flavor = "tap-preferred";
 		  bindings = <&kp>, <&kp>;
 		}; 
-		macros {
-			term_new: term_new {
-				label = "ZM_term_new";
-				compatible = "zmk,behavior-macro";
-				#binding-cells = <0>;
-				bindings
-					= <&macro_tap &kp LCTRL &kp LALT &kp T>
-					;
-			}; 
-			term_new_tab: term_new_tab {
-				label = "ZM_term_new_tab";
-				compatible = "zmk,behavior-macro";
-				#binding-cells = <0>;
-				bindings
-					= <&macro_tap &kp LCTRL &kp LSHFT &kp T>
-					;
-			};
-		};
     };
+
+	macros {
+		term_new: term_new {
+			label = "ZM_term_new";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&macro_tap &kp LCTRL &kp LALT &kp T>
+				;
+		}; 
+		term_new_tab: term_new_tab {
+			label = "ZM_term_new_tab";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&macro_tap &kp LCTRL &kp LSHFT &kp T>
+				;
+		};
+	};
 
   keymap {
     compatible = "zmk,keymap";
