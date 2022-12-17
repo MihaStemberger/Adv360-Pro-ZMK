@@ -2,13 +2,19 @@ term_new: term_new {
 label = "ZM_term_new";
 compatible = "zmk,behavior-macro";
 #binding-cells = <0>;
-bindings = <&macro_tap &kp LCTRL &kp LALT &kp T>;
+bindings = <&kp LCTRL &kp LALT &kp T>;
 }; 
 term_new_tab: term_new_tab {
 label = "ZM_term_new_tab";
 compatible = "zmk,behavior-macro";
 #binding-cells = <0>;
-bindings = <&macro_tap &kp LCTRL &kp LSHFT &kp T>;
+bindings = <&kp LCTRL &kp LSHFT &kp T>;
+};
+test: test {
+label = "ZM_test";
+compatible = "zmk,behavior-macro";
+#binding-cells = <0>;
+bindings = <&kp T>;
 };
 macro_quotes: macro_quotes{
 compatible = "zmk,behavior-macro";
